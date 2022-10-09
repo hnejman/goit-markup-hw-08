@@ -1,0 +1,29 @@
+@import '../utils/variables';
+@import '../components/common';
+
+.socials{
+    &__list{
+        display: flex;
+        gap: 10px;
+    }
+    &__icon{
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        @include animation(background-color);
+        &:hover,
+        &:focus{
+            background-color: $main-color;
+        }
+    }
+    &__svg{
+        fill: $client-background;
+        @include animation(fill);
+        &:hover,
+        &:focus{
+            fill: white;
+        }
+    }
+}

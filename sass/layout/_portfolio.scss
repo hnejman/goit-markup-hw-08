@@ -1,0 +1,89 @@
+@import '../utils/variables.scss';
+@import '../components/socials';
+@import '../components/container';
+
+.portfolio{
+    padding: 94px 0;
+}
+
+.filters{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+    &__btn{
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                    0px 1px 2px rgba(0, 0, 0, 0.08), 
+                    0px 2px 2px rgba(0, 0, 0, 0.12);
+        color: #212121;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        letter-spacing: 0.03em;
+        padding: 6px 22px;
+        text-align: center;
+        @include animation(color background-color);
+        &:hover,
+        &:focus{
+            color: white;
+            background-color: $main-color;
+        }
+    }
+}
+
+.cards{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    &__item{
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        height: 404px;
+        @include animation(box-shadow);
+        &:hover,
+        &:focus{
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+            0px 4px 4px rgba(0, 0, 0, 0.06), 
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+        &:hover .cards__paragraph,
+        &:focus .cards__paragraph{
+            transform: translateY(-294px);
+        }
+        }
+    &__label{
+        @include bold-font(18px, 1.88);
+        color: #212121;
+        margin-top: 20px;
+        margin-left: 24px;
+    }
+    &__sublabel{
+        @include main-font(16, 1.88);
+        color: $light-grey;
+        margin-top: 4px;
+        margin-bottom: 20px;
+        margin-left: 24px;
+    }
+    &__overlay{
+        position: relative;
+        top: -402px;
+        overflow: hidden;
+        width: 370;
+        height: 294;
+    }
+    &__paragraph{
+        background: rgba(33, 150, 243, 0.9);
+        color: #fff;
+        position: relative;
+        top: 294px;
+        width: 301px;
+        height: 196px;
+        @include main-font(18px, 1.56);
+        padding: 49px 45px 49px 24px;
+        @include animation(translatey(0));
+    }
+}

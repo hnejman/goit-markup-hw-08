@@ -1,0 +1,36 @@
+$main-color: #2196F3;
+$secoundary-color: #2F303A;
+$element-backgroud: #F5F4FA;
+$dark-grey: #212121;
+$light-grey: #757575;
+$client-background: #AFB1B8;
+
+@mixin main-font($size, $height){
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin semi-bold-font($size, $height){
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin bold-font($size, $height){
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin animation($property){
+    transition-property: $property;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

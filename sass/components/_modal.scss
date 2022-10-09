@@ -1,0 +1,171 @@
+@import '../utils/variables.scss';
+@import '../components/socials';
+@import '../components/container';
+@import '../utils/is-hidden';
+
+
+.backdrop{
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+.close{
+    position: relative;
+    left: calc(100% - 38px);
+    top: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 6px;
+    padding-top: 2px;
+    fill:#000;
+}
+
+.modal-form{
+    position: fixed;
+    width: 488px;
+    height: 581px;
+    left: calc(50% - 264px);
+    top: calc(50% - 290px); 
+    background: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: default;
+    padding-left: 40px;
+    color: $light-grey;
+    font-size: 12px;
+    &__container{
+        display: block;
+    }
+    &__title{
+        margin-top: 10px;
+        width: 448px;
+        height: 23px;
+        text-align: center;
+        @include bold-font(20px, 1.15);
+        color: $dark-grey;
+        margin-bottom: 8px;
+    }
+    &__label{
+        position: relative;
+        right: 18px;
+        &:focus-within .modal-form__icon,
+        &:hover .modal-form__icon{
+            fill: $main-color;
+        }
+        &--comment{
+            right:0;
+        }
+        &--comment .modal-form__input{
+            margin-top: 4px;
+            height: 96px;
+            width: 416px;
+            padding: 11px 15px;
+            margin-bottom: 20px;
+            left: 0;
+            &::placeholder{
+                @include main-font(12px, 14px);
+                letter-spacing: 0.01em;
+                color: rgba(117, 117, 117, 0.5);
+            }
+        }
+    }
+    &__icon{
+        position: relative;
+        left: 30px;
+        top: 35px;
+        z-index: 1;
+        @include animation(fill);
+    }
+    &__input{
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        width: 400px;
+        height: 18px;
+        margin-right: 32px; 
+        padding: 10px 11px 10px 35px;
+        margin-top: 4px;
+        margin-bottom: 6px;
+        position: relative;
+        left: 18px;
+        @include animation(border);
+        &:focus,
+        &:hover{
+            border: 1px solid $main-color;
+        }
+        &::placeholder{
+            @include main-font(12px, 14px);
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+    }
+    &__checkbox{
+        cursor: pointer;
+        z-index:1;
+        &::after{
+            content: "";
+            display: block;
+            width: 12px;
+            height: 11px;
+            border: solid#000 2px;
+            border-radius: 2px;
+            position: relative;
+            right: 3px;
+            background-color: #fff;
+            z-index: 1;
+            opacity: 1;
+            @include animation(opacity);
+        }
+        &:checked{
+            &::after{
+                content: "";
+                width: 12px;
+                height: 11px;
+                opacity: 0;
+                @include animation(opacity);
+            }
+        }
+    }
+    &__checked{
+        width: 16px;
+        height: 15px;
+        position: relative;
+        right: 22px;
+        top: 2px;
+        z-index: 0;
+    }
+    &__statement{
+        @include main-font(14px, 1.71);
+        color: $light-grey;
+        position: relative;
+        right: 18px;
+    }
+    &__link{
+        color: $main-color;
+        text-decoration: underline;
+    }
+    &__btn{
+        @include bold-font(16px, 1.88);
+        letter-spacing: 0.06em;
+        background-color: $main-color;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        color: #fff;
+        height: 50px;
+        width: 200px;
+        margin-left: 124px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+}

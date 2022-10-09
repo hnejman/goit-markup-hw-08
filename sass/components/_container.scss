@@ -1,0 +1,19 @@
+@import '../utils/variables.scss';
+
+.container{
+    width: 1200px;
+    padding: 0 15px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: $dark-grey;
+    padding: 0;
+    margin: 0;
+}
+
+.section{
+    padding: 94px 0;
+}

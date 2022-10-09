@@ -1,0 +1,73 @@
+@import '../utils/variables';
+@import '../components/container';
+@import '../components/common';
+
+.footer{
+    background-color: $secoundary-color;
+    padding: 60px 0;
+}
+
+.footer .container{
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+}
+
+.address{
+    &__logo{
+        color: white;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: auto;    
+        gap: 9px;
+    }
+    &__contacts{
+        color: white;
+        margin-bottom: 9px;
+    }
+    &__link{
+        color: rgba(255, 255, 255, 0.6);
+        @include animation(color);
+        &:hover,
+        &:focus{
+            color: $main-color;
+        } 
+    }
+}
+
+.newsletter{
+    display:block;
+    &__form{
+        display: flex;
+        gap: 12px;
+    }
+    &__input{
+        width: 358px;
+        height: 50px;
+        background:transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        padding-left: 16px;
+        @include animation(border);
+        &:hover,
+        &:focus{
+            border: 1px solid $main-color;
+        }
+    }
+    &__btn{
+        background-color: $main-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        width: 200px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 24px;
+        padding-left: 42px;
+        cursor: pointer;
+    }
+}

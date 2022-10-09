@@ -1,0 +1,136 @@
+@import '../utils/variables.scss';
+@import '../components/socials';
+@import '../components/container';
+
+.title{
+    background-color: $secoundary-color;
+    padding: 200px 0;
+    background-image: url("/images/Img4.jpg");
+    background-position: 50% 50%;
+    &__container{
+        text-align: center;
+    }
+    &__content{
+        color: white;
+        font-weight: 900;
+        font-size: 44px;
+        letter-spacing: 0.06em;
+        line-height: 1.36;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__btn{
+        background-color: $main-color;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        color: white;
+        cursor: pointer;
+        @include bold-font(16px, 30px);
+        letter-spacing: 0.03em;
+        padding: 10px 41px;
+        margin-left: auto;
+    }
+}
+
+.paragraphs{
+    margin-bottom: 94px;
+    &__list{
+        display: flex;
+        gap: 30px;
+    }
+    &__item{
+        color: $light-grey;
+        @include main-font(14px, 1.71);
+        text-align: justify;
+        margin-bottom: 94px;
+    }
+    &__icon{
+        width: 270px;
+        height: 120px;
+    }
+    &__title{
+        @include bold-font(14px, 1.143);
+        margin-top: 30px;
+        padding-bottom: 10px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+}
+
+.activities{
+    &__list{
+        display:flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__item{
+        height: 294px;
+    }
+    &__tag{
+        text-align: center;
+        align-items: center;
+        width: 370px;
+        background: rgba(47, 48, 58, 0.8);
+        position: relative;
+        top: -70px;
+        padding: 27px 0 27px 0;
+    }
+    &__content{
+        @include bold-font(14px, 16px);
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.team{
+    background: $element-backgroud;
+    &__list{
+        display: flex;
+        justify-content: center;
+        gap:30px;
+    }
+    &__item{
+        background: #fff;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+        color: $light-grey;
+        @include main-font(16px, 19px);
+        padding-bottom: 30px;
+        text-align: center;
+        align-content: center;
+    }
+    &__name{
+        @include semi-bold-font(16px, 19px);
+        color: $dark-grey;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .socials{
+        margin-top: 16px;
+    }
+}
+
+.clients {
+    &__list{
+        display: flex;
+        gap: 30px;
+    }
+    &__item{
+        width: 170px; 
+        height: 92px;
+        border: 1px solid $client-background;
+        border-radius: 4px;
+        fill: $client-background ;
+        @include animation(fill border);
+        &:hover,
+        &:focus{
+            fill: $main-color ;
+            border: 1px solid $main-color;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import '../utils/variables.scss';
+
+header{
+    border-bottom: 1px solid #ECECEC;
+    & .container{
+        display: flex;
+        align-items: center;
+        padding: 25px 0;
+    }
+}
+
+.navigation{
+    display: flex;
+    &__logo{
+        font-family: 'Raleway', 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1,192;
+        letter-spacing: 0.03em;
+        color: #000000;
+        cursor: pointer;
+        margin-right: 76px;
+        &--color-blue{
+            color: $main-color;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 46px;
+    }
+    &__link{
+        @include semi-bold-font(14px, 1.172);
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+        @include animation(color);
+
+        &:visited{
+            color: $dark-grey;
+        }
+
+        &::after{
+            content:"";
+            display:block;
+            height: 4px;
+            border-radius: 2px;
+            background-color: transparent;
+            position: relative;
+            top:27px;
+            @include animation(background-color);
+        }
+
+        &:hover,
+        &:focus{
+            color: $main-color;
+            &::after{
+                background-color: $main-color;
+            }
+        }
+    }
+    &__item--current &__link{
+        color: $main-color;
+    }
+    &__item--current &__link::after{
+        background-color: $main-color;
+    }
+
+}
+
+.contacts{
+    display: flex;
+    margin-left: auto;
+    gap: 50px;
+    @include semi-bold-font(14px, 1.423);
+    letter-spacing: 0.02em;
+    color: $light-grey;
+
+    &__item &__link{
+        color: $light-grey;
+        fill: $light-grey;
+        @include animation(color fill);
+    }
+
+    &__item:hover &__link,
+    &__item:focus &__link{
+        color: $main-color;
+            fill: $main-color;
+    }
+}
