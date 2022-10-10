@@ -13,7 +13,7 @@
     &__content{
         color: white;
         font-weight: 900;
-        font-size: 44px;
+        font-size: 26px;
         letter-spacing: 0.06em;
         line-height: 1.36;
         margin-bottom: 30px;
@@ -34,21 +34,28 @@
     }
 }
 
+
 .paragraphs{
     margin-bottom: 94px;
     &__list{
-        display: flex;
         gap: 30px;
+        justify-content: center;
+
     }
     &__item{
         color: $light-grey;
         @include main-font(14px, 1.71);
+        justify-content: center;
         text-align: justify;
         margin-bottom: 94px;
+        width: 100%;
     }
     &__icon{
-        width: 270px;
+        $width: 50%;
         height: 120px;
+        padding-left: calc($width - 135px);
+        background-color: $element-backgroud;
+        border-radius: 4px;
     }
     &__title{
         @include bold-font(14px, 1.143);

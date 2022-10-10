@@ -1,7 +1,9 @@
 @import '../utils/variables.scss';
+@import '../layout/mobile-menu';
 
 header{
     border-bottom: 1px solid #ECECEC;
+    margin-right: calc((100% - 1200px) / 2);
     & .container{
         display: flex;
         align-items: center;
@@ -22,6 +24,17 @@ header{
         margin-right: 76px;
         &--color-blue{
             color: $main-color;
+        }
+    }
+    .menu-toggle{
+        fill: $dark-grey;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        &:hover,
+        &:focus{
+          fill: $main-color;
         }
     }
     &__list{
@@ -69,8 +82,16 @@ header{
 
 }
 
+@media (max-width:1199px) {
+    .navigation__list{
+    display: none;
+    }
+}
+
+
+
 .contacts{
-    display: flex;
+    display: block;
     margin-left: auto;
     gap: 50px;
     @include semi-bold-font(14px, 1.423);
@@ -87,5 +108,11 @@ header{
     &__item:focus &__link{
         color: $main-color;
             fill: $main-color;
+    }
+}
+
+@media (min-width:1199px) {
+    .contacts{
+    display: flex;
     }
 }

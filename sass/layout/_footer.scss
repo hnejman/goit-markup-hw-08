@@ -71,3 +71,19 @@
         cursor: pointer;
     }
 }
+
+@media (max-width:1199px) {
+    .footer {
+        .container{
+        display: grid;
+        gap: 8px;
+        grid-template-columns: auto; 
+        justify-content: center;
+        text-align: center;
+        }
+        .socials{
+            max-width: 206px;
+        }
+    }
+
+}

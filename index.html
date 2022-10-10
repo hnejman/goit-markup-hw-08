@@ -16,24 +16,25 @@
     <header class="header">
       <div class="container">
         <nav class="navigation">
-          <a class="navigation__logo link" href="index.html"><h4>
+          <a class="navigation__logo link" href="index.html">
+            <h4>
               <span class="navigation__logo--color-blue">Web</span>Studio
-            </h4></a>
-            <button
-              class="menu-toggle js-open-menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            ><svg
+            </h4>
+          </a>
+          <button
+          class="menu-toggle" 
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          js-open-menu>
+            <svg
             width="24"
             height="24"
-            viewBox="0 0 20 20"
-          >
-            <use
-              href="./images/icon.svg#evenodd"
-            ></use>
-          </svg>
+            viewBox="0 0 20 20">
+              <use href="./images/icon.svg#evenodd">
+              </use>
+            </svg>
           </button>
-            <ul class="navigation__list list">
+            <ul class="navigation__list menu list">
               <li class="navigation__item">
                 <a class="navigation__link link">Agencja</a>
               </li>
@@ -92,11 +93,11 @@
         <div class="paragraphs container">
           <ul class="paragraphs__list list">
             <li class="paragraphs__item">
-              <div class="paragraphs__icon">
-                <svg class="paragraphs__svg" width="270" height="120">
-                  <use href="./images/icon.svg#par"></use>
-                </svg>
-              </div>
+                <div class="paragraphs__icon">
+                  <svg class="paragraphs__svg" width="270" height="120">
+                    <use href="./images/icon.svg#par"></use>
+                  </svg>
+                </div>
               <h3 class="paragraphs__title">Lorem ipsum</h3>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
               voluptas harum minus omnis autem perferendis.
@@ -430,6 +431,37 @@
 
 <!-- END FOOTER -->
 
+<!-- MOBLIE MENU -->
+
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="menu-toggle js-close-menu">
+    <svg
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  </button>
+
+  <ul class="mobile-menu">
+    <li><a href="" class="link">About</a></li>
+    <li><a href="" class="link">Products</a></li>
+    <li><a href="" class="link">Contacts</a></li>
+    <li><a href="" class="link">Career</a></li>
+  </ul>
+</div>
+
+<!-- END MOBLIE MENU -->
+
+<!-- MODAL -->
+
     <div class="backdrop fade-out is-hidden" data-modal>
       <div class="modal-form">
         <button class="close" type="button" data-modal-close>
@@ -498,5 +530,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
