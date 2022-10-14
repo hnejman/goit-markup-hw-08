@@ -4,18 +4,23 @@
 header{
     border-bottom: 1px solid #ECECEC;
     padding: 0 auto;
-    & .container{
+    .container{
         display: flex;
         align-items: center;
-        padding: 16px 0;
+        height: 80px;
     }
 }
 
 .navigation{
-    width: 100%;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
-    padding: 0 15px;
+    width: 100%;
+    @media screen and (min-width: 767px){
+        justify-content: right;
+        width: auto;
+    }
+      
     &__logo{
         font-family: 'Raleway', 'Roboto', sans-serif;
         font-weight: 700;
@@ -24,7 +29,6 @@ header{
         letter-spacing: 0.03em;
         color: #000000;
         cursor: pointer;
-        margin-right: 76px;
         &--color-blue{
             color: $main-color;
         }
@@ -34,16 +38,26 @@ header{
         background: none;
         border: none;
         cursor: pointer;
-        display: block;
+        margin-left: auto;
+        @media screen and (min-width: 767px){
+            margin-left: 0;
+        }
         &:hover,
         &:focus{
           fill: $main-color;
         }
+
     }
     &__list{
         display: none;
         align-items: center;
         gap: 46px;
+        @media screen and (min-width: 767px){
+            margin-left: 59px;
+        }
+        @media screen and (min-width: 1199px) {
+            margin-left: 69px; 
+        }
     }
     &__link{
         @include semi-bold-font(14px, 1.172);
@@ -92,7 +106,15 @@ header{
     @include semi-bold-font(14px, 1.423);
     letter-spacing: 0.02em;
     color: $light-grey;
-
+    @media (min-width: 767px) {
+        flex-direction: column;
+        gap: 10px;
+        display: flex;
+    }
+    @media (min-width: 1199px) {
+        flex-direction: row;
+        gap: 30px;
+    }
     &__item &__link{
         color: $light-grey;
         fill: $light-grey;
@@ -102,7 +124,7 @@ header{
     &__item:hover &__link,
     &__item:focus &__link{
         color: $main-color;
-            fill: $main-color;
+        fill: $main-color;
     }
 }
 
@@ -114,20 +136,6 @@ header{
     .menu-toggle{
         position: relative;
         top: -300px;
-    }
-    .contacts{
-        display: block;
-    }
-    .header{
-        .container{
-            padding: 25px 0;
-        }
-    }
-}
-
-@media (min-width: 1199px) {
-    .contacts{
-        display: flex;
     }
 }
 
