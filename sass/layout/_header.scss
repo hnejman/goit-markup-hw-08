@@ -3,7 +3,7 @@
 
 header{
     border-bottom: 1px solid #ECECEC;
-    margin-right: calc((100% - 1200px) / 2);
+    padding: 0 auto;
     & .container{
         display: flex;
         align-items: center;
@@ -12,7 +12,10 @@ header{
 }
 
 .navigation{
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
     &__logo{
         font-family: 'Raleway', 'Roboto', sans-serif;
         font-weight: 700;
@@ -27,8 +30,6 @@ header{
         }
     }
     .menu-toggle{
-        position: relative;
-        left: calc(100vw - 15px);
         fill: $dark-grey;
         background: none;
         border: none;
