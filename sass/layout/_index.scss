@@ -5,7 +5,13 @@
 .title{
     background-color: $secoundary-color;
     padding: 200px 0;
-    background-image: url("/images/Img4.jpg");
+    background-image: url("/images/Img4m.jpg");
+    @media screen and (min-width: 767px) {
+        background-image: url("/images/Img4t.jpg");
+    }
+    @media screen and (min-width: 1199px) {
+        background-image: url("/images/Img4d.jpg");
+    }
     background-position: 50% 50%;
     &__container{
         text-align: center;
@@ -14,6 +20,9 @@
         color: white;
         font-weight: 900;
         font-size: 26px;
+        @media screen and (min-width: 1199px) {
+            font-size: 44px;
+        }
         letter-spacing: 0.06em;
         line-height: 1.36;
         margin-bottom: 30px;
@@ -39,8 +48,13 @@
     margin-bottom: 94px;
     &__list{
         gap: 30px;
-        justify-content: center;
-
+        @media screen and (min-width: 767px) {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        @media screen and (min-width: 1199px) {
+            grid-template-columns: auto auto auto auto;
+        }
     }
     &__item{
         color: $light-grey;
