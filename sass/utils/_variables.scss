@@ -11,6 +11,7 @@ $client-background: #AFB1B8;
     font-weight: 400;
     font-size: $size;
     line-height: $height;
+    letter-spacing: 0.03em;
 }
 
 @mixin semi-bold-font($size, $height){
@@ -19,6 +20,7 @@ $client-background: #AFB1B8;
     font-weight: 500;
     font-size: $size;
     line-height: $height;
+    letter-spacing: 0.03em;
 }
 
 @mixin bold-font($size, $height){
@@ -27,6 +29,7 @@ $client-background: #AFB1B8;
     font-weight: 700;
     font-size: $size;
     line-height: $height;
+    letter-spacing: 0.06em;
 }
 
 @mixin animation($property){

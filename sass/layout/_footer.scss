@@ -7,13 +7,35 @@
     padding: 60px 0;
 }
 
-.footer .container{
-    display: flex;
-    gap: 70px;
-    align-items: baseline;
+
+
+.footer {
+    .container{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: auto; 
+    justify-content: center;
+    text-align: center;
+    @media screen and (min-width: 767px) and (max-width:1199px) {
+        grid-template-columns: auto auto;
+        row-gap: 60px;
+        column-gap: 144px; 
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction:row;
+        gap: 70px;
+        align-items: baseline;
+    }
+    }
+    .socials{
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
 }
 
 .address{
+    margin-bottom: 60px;
     &__logo{
         color: white;
     }
@@ -24,7 +46,8 @@
     }
     &__contacts{
         color: white;
-        margin-bottom: 9px;
+        margin-bottom: 8px;
+        margin-top: 20px;
     }
     &__link{
         color: rgba(255, 255, 255, 0.6);
@@ -38,9 +61,19 @@
 
 .newsletter{
     display:block;
+    @media screen and (min-width: 767px) {
+        place-self: center;
+        grid-column: span 2;
+        grid-auto-flow: column;
+    }
     &__form{
         display: flex;
-        gap: 12px;
+        flex-direction: column;
+        gap: 20px;
+        @media screen and (min-width: 1199px) {
+            flex-direction: row;
+            gap: 12px;
+        }
     }
     &__input{
         width: 358px;
@@ -67,23 +100,17 @@
         justify-content: left;
         align-items: center;
         gap: 24px;
+        padding: 10px 0;
         padding-left: 42px;
+        margin: 0 auto;
         cursor: pointer;
     }
 }
 
-@media (max-width:1199px) {
-    .footer {
-        .container{
-        display: grid;
-        gap: 8px;
-        grid-template-columns: auto; 
-        justify-content: center;
-        text-align: center;
-        }
+@media (min-width:1199px) {
+    .footer .container{
         .socials{
             max-width: 206px;
         }
     }
-
 }

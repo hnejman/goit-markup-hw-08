@@ -9,13 +9,16 @@ h5{
 }
 
 h2{
-    @include bold-font(36px, 1.667);
+    @include bold-font(28px, 1.18);
     text-align: center;
     margin-bottom: 50px;
+    @media screen and (min-width: 1199px) {
+        @include bold-font(36px, 1.667);
+    }
 }
 
 h5{
-    @include bold-font(14px, 16px);
+    @include bold-font(14px, 1.143);
     text-transform: uppercase;
     color: white;
     margin-bottom: 20px;

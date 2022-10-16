@@ -5,12 +5,21 @@
 .title{
     background-color: $secoundary-color;
     padding: 200px 0;
-    background-image: url("/images/Img4m.jpg");
-    @media screen and (min-width: 767px) {
-        background-image: url("/images/Img4t.jpg");
+    background-image: url("/images/Img4t.jpg");
+    background-size: 1125px;
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx){
+        background-image: url("/images/Img4t@2x.jpg");
     }
     @media screen and (min-width: 1199px) {
         background-image: url("/images/Img4d.jpg");
+        background-size: 1600px;
+        @media  screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx){
+            background-image: url("/images/Img4d@2x.jpg");
+        }
     }
     background-position: 50% 50%;
     &__container{
@@ -75,12 +84,20 @@
         @include bold-font(14px, 1.143);
         margin-top: 30px;
         padding-bottom: 10px;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
+        color: $dark-grey;
+        @media screen and (min-width: 767px) {
+            text-align: left;
+        }
     }
 }
 
 .activities{
+    display: none;
+    @media screen and (min-width:1199px) {
+        display: block;
+    }
     &__list{
         display:flex;
         justify-content: center;
@@ -109,24 +126,35 @@
 .team{
     background: $element-backgroud;
     &__list{
-        display: flex;
         justify-content: center;
         gap:30px;
+        padding: 0 15px;
+        @media screen and (min-width:767px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        @media screen and (min-width:1199px) {
+            display: flex;
+        }
     }
     &__item{
         background: #fff;
         border-radius: 0 0 4px 4px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-                0px 1px 1px rgba(0, 0, 0, 0.14),
-                0px 2px 1px rgba(0, 0, 0, 0.2);
+                    0px 1px 1px rgba(0, 0, 0, 0.14),
+                    0px 2px 1px rgba(0, 0, 0, 0.2);
         color: $light-grey;
-        @include main-font(16px, 19px);
+        @include main-font(16px, 1.19);
         padding-bottom: 30px;
         text-align: center;
         align-content: center;
+        & img{
+            margin: 0 auto;
+            width: 100%;
+        }
     }
     &__name{
-        @include semi-bold-font(16px, 19px);
+        @include semi-bold-font(16px, 1.19);
         color: $dark-grey;
         margin-top: 30px;
         margin-bottom: 10px;
@@ -139,7 +167,14 @@
 .clients {
     &__list{
         display: grid;
-        grid-template-columns: auto auto; 
+        justify-items: center;
+        grid-template-columns: auto auto;
+        @media screen and (min-width:767px) {
+            grid-template-columns: auto auto auto;
+        } 
+        @media screen and (min-width:1199px) {
+            display: flex;
+        }
         gap: 30px;
     }
     &__item{
