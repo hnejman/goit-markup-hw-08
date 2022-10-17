@@ -24,30 +24,46 @@
     @media screen and (min-width: 1200px) {
         display: flex;
         flex-direction:row;
-        gap: 70px;
-        align-items: baseline;
+        align-items: center;
+        gap: 0;
     }
     }
     .socials{
         margin: 0 auto;
         margin-bottom: 60px;
+        text-align: left;
+        @media screen and (min-width: 1200px) {
+            max-width: 206px;
+            margin: 0 70px;
+        }
     }
 }
 
 .address{
     margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        margin-bottom: 0;
+    }
     &__logo{
         color: white;
     }
     &__list{
         display: grid;
         grid-template-columns: auto;    
-        gap: 9px;
+        gap: 8px;
+        @media screen and (min-width: 1200px) {
+            gap: 9px;
+        }
     }
     &__contacts{
         color: white;
         margin-bottom: 8px;
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 9px;
+        }
         margin-top: 20px;
+        @include semi-bold-font(14px, 1.71)
     }
     &__link{
         color: rgba(255, 255, 255, 0.6);
@@ -65,6 +81,10 @@
         place-self: center;
         grid-column: span 2;
         grid-auto-flow: column;
+    }
+    @media screen and (min-width: 1199px) {
+        text-align: left;
+        margin-left: 8px;
     }
     &__form{
         display: flex;
@@ -104,13 +124,5 @@
         padding-left: 42px;
         margin: 0 auto;
         cursor: pointer;
-    }
-}
-
-@media (min-width:1199px) {
-    .footer .container{
-        .socials{
-            max-width: 206px;
-        }
     }
 }
