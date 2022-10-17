@@ -2260,15 +2260,22 @@ body {
 }
 .cards__item img {
   display: block;
-  width: 100vw;
   height: auto;
   overflow: hidden;
   -o-object-position: center;
      object-position: center;
+  position: relative;
+}
+.cards__description {
+  position: relative;
+  top: 30px;
+  height: 110px;
+  z-index: 10;
 }
 .cards__pic {
-  width: 100vw;
   height: 294px;
+  position: relative;
+  top: 1px;
 }
 .cards__label {
   font-family: "Roboto", sans-serif;
