@@ -31,8 +31,9 @@
     .socials{
         margin: 0 auto;
         margin-bottom: 60px;
-        text-align: left;
+        text-align: center;
         @media screen and (min-width: 1200px) {
+            text-align: left;
             max-width: 206px;
             margin: 0 70px;
         }

@@ -1392,10 +1392,11 @@ img {
 .footer .socials {
   margin: 0 auto;
   margin-bottom: 60px;
-  text-align: left;
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .footer .socials {
+    text-align: left;
     max-width: 206px;
     margin: 0 70px;
   }
@@ -2241,6 +2242,8 @@ body {
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
   height: 404px;
+  width: calc(100vw - 30px);
+  padding-bottom: 20px;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
@@ -2258,24 +2261,32 @@ body {
   -webkit-transform: translateY(-294px);
           transform: translateY(-294px);
 }
-.cards__item img {
-  display: block;
-  height: auto;
-  overflow: hidden;
-  -o-object-position: center;
-     object-position: center;
-  position: relative;
-}
 .cards__description {
+  display: block;
   position: relative;
-  top: 30px;
+  text-align: left;
+  width: calc(100vw - 30px);
   height: 110px;
   z-index: 10;
 }
-.cards__pic {
+.cards__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 294px;
-  position: relative;
-  top: 1px;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cards__pic {
+  position: absolute;
+  width: 450px;
+  height: 294px;
+  overflow: hidden;
 }
 .cards__label {
   font-family: "Roboto", sans-serif;
