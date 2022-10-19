@@ -55,7 +55,6 @@
         background: #FFFFFF;
         border: 1px solid #EEEEEE;
         height: 404px;
-        width: calc(100vw - 30px);
         padding-bottom: 20px;
         @include animation(box-shadow);
         &:hover,
@@ -68,14 +67,6 @@
         &:focus .cards__paragraph{
             transform: translateY(-294px);
         }
-    }
-    &__description{
-        display: block;
-        position: relative;
-        text-align: left;
-        width: calc(100vw - 30px);
-        height: 110px;
-        z-index: 10;
     }
     &__wrapper{
         display: flex;

@@ -2242,7 +2242,6 @@ body {
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
   height: 404px;
-  width: calc(100vw - 30px);
   padding-bottom: 20px;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -2260,14 +2259,6 @@ body {
 .cards__item:hover .cards__paragraph, .cards__item:focus .cards__paragraph {
   -webkit-transform: translateY(-294px);
           transform: translateY(-294px);
-}
-.cards__description {
-  display: block;
-  position: relative;
-  text-align: left;
-  width: calc(100vw - 30px);
-  height: 110px;
-  z-index: 10;
 }
 .cards__wrapper {
   display: -webkit-box;
