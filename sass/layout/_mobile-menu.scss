@@ -67,32 +67,25 @@
 
   &__socials{
     display: flex;
-    &::after{
-      content: "";
-      height: 22px;
-      width: 6px;
-      position: relative;
-      left:  6px;
-      background-color: #fff;
-      z-index: 999;
+    & li{
+      display: flex;
+      flex-wrap: nowrap;
     }
+     & li:not(:last-child)::after{
+       content: "";
+       height: 22px;
+       width: 1px;
+       background-color: rgba(33, 33, 33, 0.2);
+       position: relative;
+       display: block;
+       margin-right: 10px;
+     }
   }
   &__social {
+    margin-right: 9px;
     color: $main-color;
-    margin-left: 20px;
-    display: flex;
     @include semi-bold-font(18px, 1.33);
     letter-spacing: 0.02em;
-    &::after{
-      content: "";
-      display: block;
-      height: 22px;
-      width: 1px;
-      background-color: rgba(33, 33, 33, 0.2);
-      position: relative;
-      left:  9px;
-      z-index: 998;
-    }
   }
 }
 
