@@ -129,6 +129,8 @@
         justify-content: center;
         gap:30px;
         padding: 0 15px;
+        display: grid;
+        grid-template-columns: auto;
         @media screen and (min-width:767px) {
             display: grid;
             grid-template-columns: 50% 50%;
@@ -148,9 +150,24 @@
         padding-bottom: 30px;
         text-align: center;
         align-content: center;
-        & img{
-            margin: 0 auto;
+    }
+    &__wrapper{
+        height: 460px;
+        @media screen and (min-width:767px) {
+            height: 374px;
+        }
+        @media screen and (min-width:1199px) {
+            height: 260px;
+        }
+        overflow:hidden;
+        margin: 0 auto;
+        overflow: hidden;
+        & > img{
             width: 100%;
+            height: calc(100% - 162px);
+            display: flex;
+            justify-content: start;
+            align-items: center;
         }
     }
     &__name{
