@@ -2216,11 +2216,6 @@ body {
   grid-template-columns: auto;
   gap: 30px;
 }
-@media all and (min-width: 370px) {
-  .cards {
-    grid-template-columns: auto;
-  }
-}
 @media screen and (min-width: 767px) {
   .cards {
     grid-template-columns: auto auto;

@@ -44,9 +44,6 @@
     display: grid;
     justify-content: center;
     grid-template-columns: auto ;
-    @media all and (min-width: 370px){
-        grid-template-columns: auto; 
-    }
     @media screen and (min-width: 767px) {
         grid-template-columns: auto auto ;
         }
